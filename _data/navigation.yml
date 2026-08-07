@@ -23,6 +23,12 @@ main:
   - title: "Code"
     url: /code/
 
+  - title: "EDI"
+    url: /edi/
+
+  - title: "Plants"
+    url: /plants/
+
   - title: "Blog Posts"
     url: /year-archive/
     

@@ -237,6 +237,12 @@ collections:
   code:
     output: true
     permalink: /:collection/:path/
+  edi:
+    output: true
+    permalink: /:collection/:path/
+  plants:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -298,6 +304,24 @@ defaults:
   - scope:
       path: ""
       type: code
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _edi
+  - scope:
+      path: ""
+      type: edi
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _plants
+  - scope:
+      path: ""
+      type: plants
     values:
       layout: single
       author_profile: true

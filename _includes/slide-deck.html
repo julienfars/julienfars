@@ -1,0 +1,65 @@
+{% include base_path %}
+
+{% if include.id %}
+  {% assign slides = page.[include.id] %}
+{% else %}
+  {% assign slides = page.slides %}
+{% endif %}
+
+{% if slides and slides.size > 0 %}
+  {% assign deck_id = include.id | default: "slides" %}
+  <div class="slide-deck" id="slide-deck-{{ deck_id }}">
+    <div class="slide-deck__viewport">
+      {% for slide in slides %}
+        <div class="slide-deck__slide{% if forloop.first %} is-active{% endif %}">
+          <img src=
+            {% if slide.image_path contains "://" %}
+              "{{ slide.image_path }}"
+            {% elsif slide.image_path | slice: 0 == "/" %}
+              "{{ slide.image_path | prepend: base_path }}"
+            {% else %}
+              "{{ slide.image_path | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="{% if slide.alt %}{{ slide.alt }}{% else %}Slide {{ forloop.index }}{% endif %}">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="slide-deck__controls">
+      <button type="button" class="slide-deck__prev" aria-label="Previous slide">&larr;</button>
+      <span class="slide-deck__counter"><span class="slide-deck__current">1</span> / {{ slides.size }}</span>
+      <button type="button" class="slide-deck__next" aria-label="Next slide">&rarr;</button>
+    </div>
+  </div>
+
+  <style>
+    .slide-deck { margin: 1.5em 0; }
+    .slide-deck__viewport { position: relative; width: 100%; background: var(--global-border-color, #eee); }
+    .slide-deck__slide { display: none; }
+    .slide-deck__slide.is-active { display: block; }
+    .slide-deck__slide img { display: block; width: 100%; height: auto; }
+    .slide-deck__controls { display: flex; align-items: center; justify-content: center; gap: 1em; margin-top: 0.5em; }
+    .slide-deck__prev, .slide-deck__next { cursor: pointer; border: 1px solid #ccc; background: transparent; border-radius: 4px; padding: 0.25em 0.75em; font-size: 1em; }
+    .slide-deck__prev:hover, .slide-deck__next:hover { background: #eee; }
+    .slide-deck__counter { font-size: 0.9em; opacity: 0.75; }
+  </style>
+
+  <script>
+    (function () {
+      var deck = document.getElementById("slide-deck-{{ deck_id }}");
+      if (!deck) return;
+      var slideEls = deck.querySelectorAll(".slide-deck__slide");
+      var counterEl = deck.querySelector(".slide-deck__current");
+      var index = 0;
+
+      function show(i) {
+        slideEls[index].classList.remove("is-active");
+        index = (i + slideEls.length) % slideEls.length;
+        slideEls[index].classList.add("is-active");
+        counterEl.textContent = index + 1;
+      }
+
+      deck.querySelector(".slide-deck__prev").addEventListener("click", function () { show(index - 1); });
+      deck.querySelector(".slide-deck__next").addEventListener("click", function () { show(index + 1); });
+    })();
+  </script>
+{% endif %}
