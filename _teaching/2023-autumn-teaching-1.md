@@ -8,6 +8,8 @@ date: 2023-10-30
 location: "Oxford, United Kingdom"
 ---
 
+{% include base_path %}
+
 I hosted this practical course as a demonstrator in autumn of 2023, 2024 and 2025. This practical course on visual senses was given to medical and biomedical students of the University of Oxford to teach them about the various senses associated with visual perception. But also, to introduce them to visual examination of patients. 
 
 All images belong to the Special Senses Practical book updated in June 2020 by T. Palumaa MD; M. J. Gilhooley FRCOphth; S. Campbell PhD
@@ -16,7 +18,7 @@ Visual Acuity Assessment
 ======
 Introduced the principles of visual acuity and clinical vision testing. Students measured visual acuity using Snellen charts, interpreted clinical results (e.g., 6/6 vision), and explored the relationship between visual angle and spatial resolution. 
 
-![acuity_image](/files/courses/visual_senses/acuity.png)
+<img src="{{ base_path }}/files/courses/visual_senses/acuity.png" alt="acuity_image">
 
 Optics and Refractive Errors
 ======
@@ -30,7 +32,7 @@ Visual Fields and Perimetry
 ======
 Introduced the principles of visual field assessment and their clinical applications. Students manually mapped visual fields, identified the physiological blind spot, and related visual field defects to neurological and ophthalmological conditions. 
 
-![perimetry_image](/files/courses/visual_senses/perimetry.png)
+<img src="{{ base_path }}/files/courses/visual_senses/perimetry.png" alt="perimetry_image">
 
 Binocular Vision and Depth Perception
 ======

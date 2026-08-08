@@ -1,6 +1,6 @@
 ---
 title: "Sample Plant"
-excerpt: "Short description of the plant/photo. <br/><img src='/images/500x300.png'>"
+excerpt: "Short description of the plant/photo. <br/><img src='https://julienfars.github.io/julienfars/images/500x300.png'>"
 collection: plants
 gallery:
 ---

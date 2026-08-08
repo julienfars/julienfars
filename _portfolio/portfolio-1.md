@@ -1,6 +1,6 @@
 ---
 title: "Cold Spring Harbor Laboratory's Vision: A Platform for Linking Circuits, Behavior & Perception - T-Shirt design"
-excerpt: "Design created during the CSHL Vision Course Summer School of 2023 <br/><img src='/images/final_BACK_dark.png'>"
+excerpt: "Design created during the CSHL Vision Course Summer School of 2023 <br/><img src='https://julienfars.github.io/julienfars/images/final_BACK_dark.png'>"
 collection: portfolio
 ---
 

@@ -1,9 +1,11 @@
 ---
 title: "Amblyopia Study Recruitment Advert"
-excerpt: "Instagram advert I designed to recruit adults with lazy eye (amblyopia) for a research study in Oxford. <br/><img src='/images/design/train_vision.png'>"
+excerpt: "Instagram advert I designed to recruit adults with lazy eye (amblyopia) for a research study in Oxford. <br/><img src='https://julienfars.github.io/julienfars/images/design/train_vision.png'>"
 collection: portfolio
 ---
 
+{% include base_path %}
+
 Advert I designed to promote recruitment, on Instagram, for a research study on the neural mechanisms of visual plasticity in amblyopia (lazy eye) at the University of Oxford.
 
-![Amblyopia study recruitment advert](/images/design/train_vision.png)
+<img src="{{ base_path }}/images/design/train_vision.png" alt="Amblyopia study recruitment advert">
