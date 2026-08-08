@@ -9,6 +9,15 @@ redirect_from:
 
 {% include base_path %}
 
+Postdoctoral researcher with a PhD, combining strong scientific expertise in neuroscience and vision science with technical skills in machine learning, statistical modelling, and data engineering (Python, R, AWS). Experienced in applying computational and quantitative methods to complex, high-dimensional multimodal datasets — from clinical and neuroimaging data to biological and behavioural measurements. Rigorous, autonomous, and used to interdisciplinary work at the interface of artificial intelligence, neuroscience, and health.
+
+Prefer a PDF? Pick whichever version fits what you're looking for:
+
+<div class="cv-download-links">
+  <a href="{{ base_path }}/files/cv/Julien%20Fars%20-%20CV%20Quantitative%20Researcher.pdf" class="btn btn--primary">Download CV (English – Quantitative Research)</a>
+  <a href="{{ base_path }}/files/cv/CV_Julien_Fars_Capgemini.pdf" class="btn btn--inverse">Télécharger le CV (Français – Data Science)</a>
+</div>
+
 Education
 ======
 * Ph.D in Research in Human Biology, Ophthalmology and Neurosciences, Friedrich-Alexander-Universität
@@ -48,26 +57,52 @@ Erlangen-Nürnberg, Erlangen, DE
   
 Skills
 ======
-* Data Science
+* Statistical Modelling & Analysis
+  * Statistical analysis and modelling
+  * Bayesian statistics
   * Machine learning
-  * Statistical modelling
-  * Data analysis 
-  * Quality control 
-* Programming and Engineerings
+  * Predictive modelling
+  * Model fitting and optimisation
+  * Multivariate analysis
+  * Hypothesis testing
+  * Quality control
+* Programming & Data
   * Python
   * R
-  * SQL/noSQL
-  * C/C#/C++
   * MATLAB
+  * C/C#/C++
+  * SQL/NoSQL
   * Git
-  * AWS 
-  * Data visualisation
-* Biomedical Data and Methods
-  * Neuroimagining (MRI, fMRI, MRS)
-  * Clinical and physiological data 
-  * Multimodal data analysis 
-  * eCRF
-  * CDISC
+  * Data pipelines
+  * Large-scale data processing
+* Machine Learning
+  * scikit-learn
+  * TensorFlow
+  * Model training and evaluation
+  * Feature extraction
+  * Computational modelling
+* Biomedical Data & Clinical Research
+  * Neuroimaging (MRI, fMRI, MRS)
+  * Clinical and physiological data
+  * Multimodal data analysis
+  * eCRF / CDISC
+  * FSL, fMRIPrep, FreeSurfer
+* Computational Environment & Cloud
+  * Linux
+  * SLURM
+  * AWS
+  * Docker
+  * Reproducible workflows
+  * Version control
+* Communication & Collaboration
+  * Scientific communication
+  * Multidisciplinary collaboration
+  * Technical teaching
+  * Research project management
+* Languages
+  * French: native
+  * English: bilingual
+  * German: basic
 
 Publications
 ======
