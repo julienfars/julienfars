@@ -27,8 +27,8 @@ author:
   name             : "Juju Fars"
   pronouns         : # example: "she/her"  
   bio              : "Data Scientist, R&D"
-  location         : "TBD/Oxford"
-  employer         : "Available"
+  location         : # add later
+  employer         : "Available for work"
   uri              : # URL
   email            : "julienfars@gmail.com" 
 
