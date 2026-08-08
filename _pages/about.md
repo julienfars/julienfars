@@ -19,13 +19,35 @@ Here you'll find:
 
 - My CV
 - Publications
-- Conference talks
-- Scientific posters
-- Courses and training
+- Talks & presentations
+- Teaching
 - Portfolio, designs, and creative projects
 - Code examples and technical work
+- EDI work
+- Plants (yes, really)
+- Explorations — write-ups on things I'm learning outside of work, topic by topic
 
-The website is still growing, and I'll continue adding new content, projects, and resources over time. Thanks for stopping by!
+Thanks for stopping by!
+
+## Roadmap
+
+**Done:**
+
+- [x] Talks & Presentations — journal club, a Pride panel, a VR showcase, and a BBC Radio Oxford interview, each with slides and downloads
+- [x] Teaching — five courses (Git, Git GUIs, Open Science parts 1 & 2, Visual Senses) with browsable slide decks
+- [x] EDI — Pride quizzes and event adverts for 2024 and 2025
+- [x] Portfolio — first design entries added
+- [x] New sections scaffolded: Code, Plants
+- [x] Explorations — replaced the old blog with a topic-based section, ready for the first write-ups
+- [x] CV — refreshed and cleaned up
+
+**Coming up:**
+
+- [ ] Add the remaining scientific talks (ARVO, ECVP, AVA)
+- [ ] Add more of my designs to the Portfolio section
+- [ ] Add entries to Code
+- [ ] Add photos to Plants
+- [ ] Start exploring Godot
 
 ## Thankings 
 
