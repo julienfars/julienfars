@@ -11,13 +11,6 @@ redirect_from:
 
 Postdoctoral researcher with a PhD, combining strong scientific expertise in neuroscience and vision science with technical skills in machine learning, statistical modelling, and data engineering (Python, R, AWS). Experienced in applying computational and quantitative methods to complex, high-dimensional multimodal datasets — from clinical and neuroimaging data to biological and behavioural measurements. Rigorous, autonomous, and used to interdisciplinary work at the interface of artificial intelligence, neuroscience, and health.
 
-Prefer a PDF? Pick whichever version fits what you're looking for:
-
-<div class="cv-download-links">
-  <a href="{{ base_path }}/files/cv/Julien%20Fars%20-%20CV%20Quantitative%20Researcher.pdf" class="btn btn--primary">Download CV (English – Quantitative Research)</a>
-  <a href="{{ base_path }}/files/cv/CV_Julien_Fars_Capgemini.pdf" class="btn btn--inverse">Télécharger le CV (Français – Data Science)</a>
-</div>
-
 Education
 ======
 * Ph.D in Research in Human Biology, Ophthalmology and Neurosciences, Friedrich-Alexander-Universität
