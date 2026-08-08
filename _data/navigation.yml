@@ -29,8 +29,8 @@ main:
   - title: "Plants"
     url: /plants/
 
-  - title: "Blog Posts"
-    url: /year-archive/
+  - title: "Explorations"
+    url: /explorations/
     
   - title: "CV"
     url: /cv/
