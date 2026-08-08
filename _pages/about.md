@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Welcome to Julien Fars personal pages (building)"
+description: "Julien Fars' personal website: publications, talks, teaching, portfolio, code, EDI work, and more."
 author_profile: true
 redirect_from: 
   - /about/

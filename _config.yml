@@ -144,14 +144,21 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "me.jpg" # Social media default site image
+og_description           : "Julien Fars' academic portfolio — publications, talks, teaching, portfolio, code, and more." # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Julien Fars"
+  links:
+    - "https://scholar.google.com/citations?user=NkSLVCkAAAAJ&hl=en"
+    - "https://orcid.org/0000-0001-7771-5029"
+    - "https://www.researchgate.net/profile/Juju-Fars/research"
+    - "https://github.com/julienfars"
+    - "https://www.linkedin.com/in/julien-fars/"
+    - "https://bsky.app/profile/juju-vision.bsky.social"
+    - "https://soundcloud.com/juju-fars_vision"
 
 
 # Analytics

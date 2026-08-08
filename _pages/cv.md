@@ -2,6 +2,7 @@
 layout: archive
 title: "CV"
 permalink: /cv/
+description: "Julien Fars' CV: education, work experience, skills, publications, talks, and teaching."
 author_profile: true
 redirect_from:
   - /resume
