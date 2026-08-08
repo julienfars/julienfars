@@ -2,7 +2,7 @@
 title: "Chromatic discrimination measures in mature observers improve with a longer response window"
 collection: publications
 category: conferences
-permalink: 'https://scholar.google.com/scholar?cluster=15693907689185173960&hl=en&oi=scholarr'
+permalink: /publication/2023-05-01-Mature_Observers
 excerpt: ''
 date: 2023-05-01
 venue: 'PERCEPTION'

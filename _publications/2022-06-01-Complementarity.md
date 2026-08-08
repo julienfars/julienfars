@@ -2,7 +2,7 @@
 title: "Complementarity of sensitivity and just noticeable difference in the study of Retinitis Pigmentosa and Stargardt disease"
 collection: publications
 category: conferences
-permalink: 'https://iovs.arvojournals.org/article.aspx?articleid=2780496'
+permalink: /publication/2022-06-01-Complementarity
 excerpt: 'To evaluate if sensitivity and just noticeable difference thresholds were modified in patients with retinitis pigmentosa (RP) and Stargardt disease (STGD1).'
 date: 2022-06-01
 venue: 'Investigative Ophthalmology & Visual Science'

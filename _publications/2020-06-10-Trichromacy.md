@@ -2,7 +2,7 @@
 title: "Discriminating anomalous trichromacy and cone degeneration in retinitis pigmentosa patients"
 collection: publications
 category: conferences
-permalink: 'https://iovs.arvojournals.org/article.aspx?articleid=2768834'
+permalink: /publication/2020-06-10-Trichromacy
 excerpt: 'We performed red-green color matches using an anomaloscope, as well as measurements of photoreceptor-isolating temporal contrast sensitivities in a cohort of patients with retinitis pigmentosa (RP) and a color-normal control group. '
 date: 2020-06-10
 venue: 'Investigative Ophthalmology & Visual Science'

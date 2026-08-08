@@ -2,7 +2,7 @@
 title: "Psychometric curves in retinitis pigmentosa patients"
 collection: publications
 category: conferences
-permalink: 'https://iovs.arvojournals.org/article.aspx?articleid=2773398'
+permalink: /publication/2021-06-21-Psychometric_Curves
 excerpt: 'To study if the contrast range of uncertainty around a flicker detection thresholds was enlarged in patients with retinitis pigmentosa (RP)'
 date: 2021-06-21
 venue: 'Investigative Ophthalmology & Visual Science'

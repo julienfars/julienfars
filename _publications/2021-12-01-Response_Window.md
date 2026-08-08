@@ -2,7 +2,7 @@
 title: "Chromatic discrimination: The response window does matter for veridical measurement in mature observers"
 collection: publications
 category: conferences
-permalink: 'https://scholar.google.com/scholar?cluster=3370824502352563941&hl=en&oi=scholarr'
+permalink: /publication/2021-12-01-Response_Window
 excerpt: 'To study the response window and the effect on mature observers'
 date: 2021-12-01
 venue: 'PERCEPTION'
