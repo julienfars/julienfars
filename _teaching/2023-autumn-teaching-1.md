@@ -1,5 +1,5 @@
 ---
-title: "Practical course - Visual Senses"
+title: "Practical course - Visual Senses (2023-2025)"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2023-autumn-teaching-1
@@ -16,7 +16,7 @@ Visual Acuity Assessment
 ======
 Introduced the principles of visual acuity and clinical vision testing. Students measured visual acuity using Snellen charts, interpreted clinical results (e.g., 6/6 vision), and explored the relationship between visual angle and spatial resolution. 
 
-![acuity_image](/images/courses/acuity.png)
+![acuity_image](/files/courses/visual_senses/acuity.png)
 
 Optics and Refractive Errors
 ======
@@ -30,7 +30,7 @@ Visual Fields and Perimetry
 ======
 Introduced the principles of visual field assessment and their clinical applications. Students manually mapped visual fields, identified the physiological blind spot, and related visual field defects to neurological and ophthalmological conditions. 
 
-![perimetry_image](/images/courses/perimetry.png)
+![perimetry_image](/files/courses/visual_senses/perimetry.png)
 
 Binocular Vision and Depth Perception
 ======
