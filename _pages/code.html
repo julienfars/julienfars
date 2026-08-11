@@ -8,6 +8,53 @@ author_profile: true
 
 {% include base_path %}
 
+{% assign code_languages = site.code | map: "language" | compact | uniq | sort %}
+
+{% if code_languages.size > 1 %}
+<div class="code-filter" role="group" aria-label="Filter projects by language">
+  <button type="button" class="code-filter__btn is-active" data-filter="all">All</button>
+  {% for lang in code_languages %}
+    <button type="button" class="code-filter__btn" data-filter="{{ lang }}">{{ lang }}</button>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div id="code-archive">
 {% for post in site.code reversed %}
   {% include archive-single.html %}
 {% endfor %}
+</div>
+
+{% if code_languages.size > 1 %}
+<style>
+  .code-filter { margin-bottom: 1.5em; display: flex; flex-wrap: wrap; gap: 0.5em; }
+  .code-filter__btn {
+    font-size: 0.8em;
+    padding: 0.35em 0.9em;
+    border-radius: 999px;
+    border: 1px solid #8b8b8b;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+  .code-filter__btn.is-active { background: #6b7cff; border-color: #6b7cff; color: #fff; }
+  #code-archive .list__item[hidden] { display: none; }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('.code-filter__btn');
+    var items = document.querySelectorAll('#code-archive .list__item');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        buttons.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var filter = btn.getAttribute('data-filter');
+        items.forEach(function (item) {
+          var lang = item.getAttribute('data-code-language');
+          item.hidden = !(filter === 'all' || lang === filter);
+        });
+      });
+    });
+  });
+</script>
+{% endif %}

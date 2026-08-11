@@ -41,12 +41,13 @@ Thanks for stopping by!
 - [x] New sections scaffolded: Code, Plants
 - [x] Explorations — replaced the old blog with a topic-based section, ready for the first write-ups
 - [x] CV — refreshed and cleaned up
+- [x] Added scientific talks (ECVP, AVA)
+- [x] Added entries to Code
 
 **Coming up:**
 
-- [ ] Add the remaining scientific talks (ARVO, ECVP, AVA)
+- [ ] Add the remaining scientific talks (ARVO)
 - [ ] Add more of my designs to the Portfolio section
-- [ ] Add entries to Code
 - [ ] Add photos to Plants
 - [ ] Start exploring Godot
 
