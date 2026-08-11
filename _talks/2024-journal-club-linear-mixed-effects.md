@@ -5,7 +5,7 @@ type: "Journal Club"
 talk_type: "Journal Club"
 permalink: /talks/2024-journal-club-linear-mixed-effects
 venue: "Wellcome Centre for Integrative Neuroimaging (WIN), University of Oxford"
-date: 2024-01-01
+date: 2024-03-15
 location: "Oxford, United Kingdom"
 excerpt: "Journal club presentation on linear mixed effects models, co-presented with Hanna."
 slidesurl: "/files/talks/Linear_Mixed_Effects.pdf"
