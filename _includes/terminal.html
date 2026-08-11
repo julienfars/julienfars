@@ -1,0 +1,339 @@
+{% include base_path %}
+
+<div class="jf-term" id="jf-term">
+  <div class="jf-term__bar">
+    <span class="jf-term__dot jf-term__dot--r"></span>
+    <span class="jf-term__dot jf-term__dot--y"></span>
+    <span class="jf-term__dot jf-term__dot--g"></span>
+    <span class="jf-term__title">juju@julienfars.github.io</span>
+  </div>
+  <div class="jf-term__body" id="jf-term-body" tabindex="-1"></div>
+  <div class="jf-term__inputline">
+    <span class="jf-term__prompt" id="jf-term-prompt">guest@juju:~$</span>
+    <input type="text" class="jf-term__input" id="jf-term-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input">
+  </div>
+</div>
+
+<style>
+  .jf-term {
+    --jf-bg: #0d1117;
+    --jf-fg: #39ff88;
+    --jf-dim: #6b7280;
+    --jf-accent: #39ff88;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    background: var(--jf-bg);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    overflow: hidden;
+    margin: 1.5em 0;
+    max-width: 100%;
+  }
+  .jf-term__bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #161b22;
+    border-bottom: 1px solid #21262d;
+  }
+  .jf-term__dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  .jf-term__dot--r { background: #ff5f56; }
+  .jf-term__dot--y { background: #ffbd2e; }
+  .jf-term__dot--g { background: #27c93f; }
+  .jf-term__title {
+    margin-left: 8px;
+    color: var(--jf-dim);
+    font-size: 0.8em;
+  }
+  .jf-term__body {
+    height: 320px;
+    overflow-y: auto;
+    padding: 14px 16px;
+    color: var(--jf-fg);
+    font-size: 0.85em;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .jf-term__body a { color: var(--jf-accent); text-decoration: underline; }
+  .jf-term__line-cmd { color: #e6edf3; }
+  .jf-term__line-cmd::before { content: "$ "; color: var(--jf-accent); }
+  .jf-term__dim { color: var(--jf-dim); }
+  .jf-term__inputline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px 14px;
+    border-top: 1px solid #21262d;
+  }
+  .jf-term__prompt { color: var(--jf-accent); font-size: 0.85em; white-space: nowrap; }
+  .jf-term__input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e6edf3;
+    font-family: inherit;
+    font-size: 0.85em;
+  }
+  .jf-term__body::-webkit-scrollbar { width: 8px; }
+  .jf-term__body::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+</style>
+
+<script>
+(function () {
+  var basePath = "{{ base_path }}";
+  var root = document.getElementById("jf-term");
+  if (!root) return;
+  var body = document.getElementById("jf-term-body");
+  var input = document.getElementById("jf-term-input");
+  var promptEl = document.getElementById("jf-term-prompt");
+
+  var STORE_NAME = "jf_term_name";
+  var STORE_VISITS = "jf_term_visits";
+  var STORE_THEME = "jf_term_accent";
+
+  var THEMES = {
+    green: "#39ff88",
+    amber: "#ffb347",
+    blue: "#58a6ff",
+    pink: "#ff79c6"
+  };
+
+  function escapeHTML(str) {
+    var div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function getName() {
+    return localStorage.getItem(STORE_NAME) || "";
+  }
+
+  function setName(name) {
+    localStorage.setItem(STORE_NAME, name);
+    promptEl.textContent = name.toLowerCase().replace(/\s+/g, "-") + "@juju:~$";
+  }
+
+  function applyTheme(name) {
+    var color = THEMES[name];
+    if (!color) return false;
+    root.style.setProperty("--jf-fg", color);
+    root.style.setProperty("--jf-accent", color);
+    localStorage.setItem(STORE_THEME, name);
+    return true;
+  }
+
+  function bumpVisits() {
+    var n = parseInt(localStorage.getItem(STORE_VISITS) || "0", 10) + 1;
+    localStorage.setItem(STORE_VISITS, n);
+    return n;
+  }
+
+  function print(html, opts) {
+    opts = opts || {};
+    var line = document.createElement("div");
+    line.className = opts.cls || "";
+    line.innerHTML = html;
+    body.appendChild(line);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function printCmd(raw) {
+    print(escapeHTML(raw), { cls: "jf-term__line-cmd" });
+  }
+
+  function printDim(text) {
+    print(escapeHTML(text), { cls: "jf-term__dim" });
+  }
+
+  function link(href, text) {
+    var abs = href.indexOf("http") === 0 || href.indexOf("mailto:") === 0 ? href : basePath + href;
+    return '<a href="' + abs + '" target="_blank" rel="noopener">' + text + "</a>";
+  }
+
+  var COMMANDS = {};
+
+  COMMANDS.help = function () {
+    return [
+      "Available commands:",
+      "  about, research, code, talks, publications, teaching, edi, plants, cv, contact",
+      "  name &lt;yourname&gt;   — tell me what to call you",
+      "  theme &lt;green|amber|blue|pink&gt;  — change the accent colour",
+      "  clear             — clear the screen",
+      "",
+      "Or just ask me something in plain English, e.g. \"what do you research?\" or \"are you available for hire?\""
+    ].join("\n");
+  };
+
+  COMMANDS.about = COMMANDS.whoami = function () {
+    return [
+      "Julien Fars (goes by Juju in research contexts) — Data Scientist / vision scientist, currently available for work.",
+      "PhD in vision science (temporal contrast sensitivity in retinal disease), now working on amblyopia treatment and neuroimaging at the University of Oxford.",
+      "This whole site is basically an interactive CV — try `research`, `code`, or `talks`."
+    ].join("\n");
+  };
+
+  COMMANDS.research = function () {
+    return [
+      "Main research threads:",
+      "  • Amblyopia ('lazy eye') — VR-based dichoptic training + fMRI/MRS to study GABAergic disinhibition in visual cortex",
+      "  • Chromatic discrimination — how response-window duration affects colour thresholds in older observers",
+      "  • Temporal contrast sensitivity — photoreceptor-isolating (silent substitution) stimuli in healthy vision and retinal disease (Stargardt disease)",
+      "See " + link("/publications/", "publications") + " and " + link("/code/", "code") + " for the papers and the pipelines behind them."
+    ].join("\n");
+  };
+
+  COMMANDS.code = COMMANDS.projects = function () {
+    return [
+      "Code projects, one per GitHub repo, each with badges linking back live:",
+      "  • tCSF (Light4SightNG) — C# silent-substitution stimulator",
+      "  • Stargardt_paper_2021 — R analysis for the Stargardt disease paper",
+      "  • CCT_Chromatic_measurements — R, chromatic discrimination study",
+      "  • mrs_amblyopia_analysis — Python/Bash MRS pipeline",
+      "  • lazy_eye_VR_training — C#/Unity VR amblyopia training app",
+      "  • visual_tests_amblyopia — MATLAB/Psychtoolbox test battery",
+      "Full list, with a language filter: " + link("/code/", "/code/")
+    ].join("\n");
+  };
+
+  COMMANDS.talks = function () {
+    return [
+      "Some highlights: ECVP 2021 (chromatic discrimination poster), AVA Christmas Meetings 2022 & 2025, a BBC Radio Oxford interview, an Oxford Pride panel, and an Optica/OSA data blitz.",
+      "Full list: " + link("/talks/", "/talks/")
+    ].join("\n");
+  };
+
+  COMMANDS.publications = function () {
+    return "Peer-reviewed papers on chromatic discrimination, temporal contrast sensitivity, and retinal disease: " + link("/publications/", "/publications/");
+  };
+
+  COMMANDS.teaching = function () {
+    return "Courses taught: Git, Git GUIs, Open Science (parts 1 & 2), and Visual Senses. Slides here: " + link("/teaching/", "/teaching/");
+  };
+
+  COMMANDS.edi = function () {
+    return "EDI work includes chairing a Pride Month panel on LGBTQ+ health research, and Pride quizzes/event materials: " + link("/edi/", "/edi/");
+  };
+
+  COMMANDS.plants = function () {
+    return "Yes, really — a small collection of plant photos and notes: " + link("/plants/", "/plants/") + " 🌱";
+  };
+
+  COMMANDS.cv = function () {
+    return "Full CV: " + link("/cv/", "/cv/");
+  };
+
+  COMMANDS.contact = function () {
+    return [
+      "Email: " + link("mailto:julienfars@gmail.com", "julienfars@gmail.com"),
+      "GitHub: " + link("https://github.com/julienfars", "github.com/julienfars"),
+      "LinkedIn: " + link("https://www.linkedin.com/in/julien-fars/", "linkedin.com/in/julien-fars"),
+      "Google Scholar: " + link("https://scholar.google.com/citations?user=NkSLVCkAAAAJ&hl=en", "scholar profile")
+    ].join("\n");
+  };
+
+  COMMANDS.clear = function () {
+    body.innerHTML = "";
+    return null;
+  };
+
+  COMMANDS.sudo = function () {
+    return "Nice try. This terminal runs on good faith and localStorage, not root access.";
+  };
+
+  COMMANDS.coffee = function () {
+    return "☕ Error 418: I'm a teapot. But yes, always up for a coffee chat.";
+  };
+
+  var FAQ = [
+    { kw: ["hire", "available", "job", "recruit", "work with", "opportunit"], a: "Yes — currently available for work. Best way in is `contact`, or email directly." },
+    { kw: ["amblyopia", "lazy eye"], a: "Amblyopia work: VR-based dichoptic training paired with fMRI/MRS to see whether perceptual training reduces GABAergic inhibition in visual cortex. Try `code` for the repos, or `talks` for the AVA 2025 talk on it." },
+    { kw: ["gaba", "mrs", "spectroscopy"], a: "The MRS pipeline measures GABA concentration in early visual cortex before/after amblyopia training — see the `mrs_amblyopia_analysis` repo (`code` command)." },
+    { kw: ["colour", "color", "chromatic"], a: "Chromatic discrimination research looks at how response-window duration affects colour thresholds, especially in older observers — published in Scientific Reports. Try `research` or `code`." },
+    { kw: ["stargardt"], a: "Stargardt disease study compared cone- and rod-driven temporal contrast sensitivity in patients vs healthy controls, looking for a functional biomarker. See `code` for the analysis repo." },
+    { kw: ["vr", "virtual reality", "oculus", "quest"], a: "There's a Unity/C# app for the Meta Quest 2 that delivers the dichoptic amblyopia training — see `code`." },
+    { kw: ["phd", "doctorate", "erlangen"], a: "PhD (Dr. rer. biol. hum) from Friedrich-Alexander-Universität Erlangen-Nürnberg, on temporal contrast sensitivity in retinal disease, before moving to Oxford." },
+    { kw: ["oxford", "location", "where"], a: "Based in Oxford, UK, working within Oxford's neuroscience/neuroimaging departments." },
+    { kw: ["plant", "garden"], a: "Yes, there's a whole `plants` section. Type `plants`." },
+    { kw: ["pride", "lgbt", "edi", "diversity"], a: "Chaired an Oxford Pride Month panel on LGBTQ+ health research, plus EDI event materials — type `edi`." },
+    { kw: ["hello", "hi", "hey", "yo"], a: "Hey! Type `help` to see what I can do, or ask me about the research." }
+  ];
+
+  function matchFAQ(text) {
+    var lower = text.toLowerCase();
+    for (var i = 0; i < FAQ.length; i++) {
+      for (var j = 0; j < FAQ[i].kw.length; j++) {
+        if (lower.indexOf(FAQ[i].kw[j]) !== -1) return FAQ[i].a;
+      }
+    }
+    return null;
+  }
+
+  function greet() {
+    var name = getName();
+    var visits = bumpVisits();
+    var savedTheme = localStorage.getItem(STORE_THEME);
+    if (savedTheme) applyTheme(savedTheme);
+    if (name) {
+      promptEl.textContent = name.toLowerCase().replace(/\s+/g, "-") + "@juju:~$";
+      print("Welcome back" + (visits > 1 ? " (visit #" + visits + ")" : "") + ", " + escapeHTML(name) + ". Type <code>help</code> to see what's around.");
+    } else {
+      print("Hi, I'm a small scripted terminal for this site — no AI, just me and localStorage. Type <code>help</code>, or `name yourname` so I know what to call you.");
+    }
+  }
+
+  function handle(raw) {
+    var trimmed = raw.trim();
+    if (!trimmed) return;
+    printCmd(trimmed);
+
+    var parts = trimmed.split(/\s+/);
+    var cmd = parts[0].toLowerCase();
+    var rest = parts.slice(1).join(" ");
+
+    if (cmd === "name" && rest) {
+      setName(rest);
+      print("Got it — I'll call you " + escapeHTML(rest) + ".");
+      return;
+    }
+
+    if (cmd === "theme" && rest) {
+      if (applyTheme(rest.toLowerCase())) {
+        print("Accent set to " + escapeHTML(rest.toLowerCase()) + ".");
+      } else {
+        printDim("Unknown theme. Try: green, amber, blue, pink.");
+      }
+      return;
+    }
+
+    if (COMMANDS[cmd]) {
+      var out = COMMANDS[cmd]();
+      if (out) print(out);
+      return;
+    }
+
+    var faqAnswer = matchFAQ(trimmed);
+    if (faqAnswer) {
+      print(faqAnswer);
+      return;
+    }
+
+    printDim("Not a command I know. Type `help`, or ask about the research, code, or how to get in touch.");
+  }
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      var val = input.value;
+      input.value = "";
+      handle(val);
+    }
+  });
+
+  root.addEventListener("click", function () {
+    input.focus();
+  });
+
+  greet();
+})();
+</script>

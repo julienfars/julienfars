@@ -30,6 +30,12 @@ Here you'll find:
 
 Thanks for stopping by!
 
+## Ask My Terminal
+
+A small scripted terminal — no AI behind it, just a fixed set of commands and canned answers about my research, code, and talks. Type `help` to get started, or `name yourname` if you'd like it to remember you.
+
+{% include terminal.html %}
+
 ## Roadmap
 
 **Done:**
