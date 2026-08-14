@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-# Welcome!
+## Welcome!
 
 I'm a biomedical researcher with a PhD in Human Biology and several years of postodoctoral research a the University of Oxford. I am currently moving from academic neuroscience into data science and research and development. My work spans Python/ML pipelines on large-scale imaging (MRI/FMRI) and behavioural data, end-to-end clinical study delivery, and VR-based rehabilitation research.
 

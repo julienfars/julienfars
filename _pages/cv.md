@@ -12,8 +12,7 @@ redirect_from:
 
 Biomedical researcher with a PhD in Human Biology and several years of postdoctoral research at the University of Oxford, currently moving from academic neuroscience into data science and research & development. Experience spans Python/ML pipelines on large-scale imaging (MRI/fMRI) and behavioural data, end-to-end clinical study delivery, and VR-based rehabilitation research, combined with rigorous statistical modelling (frequentist and Bayesian) and reproducible data engineering (Python, R, AWS). Rigorous, autonomous, and used to interdisciplinary work at the interface of data science, neuroscience, and health.
 
-Education
-======
+## Education
 * Ph.D in Research in Human Biology, Ophthalmology and Neurosciences, Friedrich-Alexander-Universität
 Erlangen-Nürnberg, Germany, 2022
   * Thesis: Function and dysfunction of
@@ -24,8 +23,7 @@ effects
 * M.S. in Neurosciences, Université Lyon 1, France, 2017
 * B.S. in Biology, Biochemistry, Physiology, Université Lyon 1, France, 2016
 
-Work experience
-======
+## Work experience
 * 2022 - 2026: Postdoctoral Research Fellow in Clinical Neurosciences
   * University of Oxford Centre of Integrative Neuroimaging, Oxford, UK
   * Duties included: 
@@ -53,8 +51,7 @@ Erlangen-Nürnberg, Erlangen, DE
     * Redesigned the study population and protocol when COVID-19 disrupted recruitment, leading to a first-author publication in Scientific Reports.
   * Supervisor: Prof. Jan Kremers and Prof. Cord Huchzermeyer
   
-Skills
-======
+## Skills
 * Statistical Modelling & Analysis
   * Statistical analysis and modelling
   * Bayesian statistics
@@ -109,26 +106,22 @@ Skills
   * English: bilingual
   * German: basic
 
-Awards
-======
+## Awards
 * OxCIN Good Citizen Award (2025)
 * CSHL Regeneron Scholars Programme grant (2023)
 * ARVO International Travel Grant (2022)
 
-Publications
-======
+## Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
+## Talks
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
-Teaching
-======
+## Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
