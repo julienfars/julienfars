@@ -1,6 +1,6 @@
 ---
 title: "Amblyopia VR — Dichoptic Training in Virtual Reality"
-excerpt: "A Unity/C# app for the Meta Quest 2 that delivers adaptive dichoptic training for amblyopia (lazy eye), used in a clinical study. <br/><img src='/images/code/lazy-eye-vr-training.png'>"
+excerpt: "A Unity/C# app for the Meta Quest 2 that delivers adaptive dichoptic training for amblyopia (lazy eye), used in a clinical study. <br/><img src='https://julienfars.github.io/julienfars/images/code/lazy-eye-vr-training.png'>"
 collection: code
 language: "C#"
 github: "https://github.com/julienfars/lazy_eye_VR_training"

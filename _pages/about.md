@@ -52,10 +52,10 @@ A small scripted terminal — no AI behind it, just a fixed set of commands and 
 
 **Coming up:**
 
-- [ ] Add the remaining scientific talks (ARVO)
 - [ ] Add more of my designs to the Portfolio section
 - [ ] Add photos to Plants
 - [ ] Start exploring Godot
+- [ ] Add my population receptive fields code (when out of embargo)
 
 ## Thankings 
 

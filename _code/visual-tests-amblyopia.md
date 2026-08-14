@@ -1,6 +1,6 @@
 ---
 title: "Amblyopia Test Battery — Psychtoolbox Visual Assessments"
-excerpt: "A MATLAB/Psychtoolbox battery of visual tests (acuity, contrast sensitivity, binocular imbalance, dichoptic and stereo tasks) used to assess amblyopic vision before and after training. <br/><img src='/images/code/visual-tests-amblyopia-icon.png'>"
+excerpt: "A MATLAB/Psychtoolbox battery of visual tests (acuity, contrast sensitivity, binocular imbalance, dichoptic and stereo tasks) used to assess amblyopic vision before and after training. <br/><img src='https://julienfars.github.io/julienfars/images/code/visual-tests-amblyopia-icon.png'>"
 collection: code
 language: "MATLAB"
 github: "https://github.com/julienfars/visual_tests_amblyopia"
