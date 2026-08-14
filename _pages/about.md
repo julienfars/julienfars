@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to Julien Fars personal pages (building)"
+title: "Julien Fars personal pages"
 description: "Julien Fars' personal website: publications, talks, teaching, portfolio, code, EDI work, and more."
 author_profile: true
 redirect_from: 
@@ -8,9 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-# The Objective
-
-Welcome!
+# Welcome!
 
 After spending seven years in academia, I realised there was no single place to showcase the projects, research, collaborations, and experiences that have shaped my career. A CV can only tell part of the story, so I created this website to bring everything together in one place.
 
@@ -56,6 +54,7 @@ A small scripted terminal — no AI behind it, just a fixed set of commands and 
 - [ ] Add photos to Plants
 - [ ] Start exploring Godot
 - [ ] Add my population receptive fields code (when out of embargo)
+- [ ] Start exploring web scrapping
 
 ## Thankings 
 
