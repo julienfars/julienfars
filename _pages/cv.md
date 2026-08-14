@@ -10,7 +10,7 @@ redirect_from:
 
 {% include base_path %}
 
-Postdoctoral researcher with a PhD, combining strong scientific expertise in neuroscience and vision science with technical skills in machine learning, statistical modelling, and data engineering (Python, R, AWS). Experienced in applying computational and quantitative methods to complex, high-dimensional multimodal datasets — from clinical and neuroimaging data to biological and behavioural measurements. Rigorous, autonomous, and used to interdisciplinary work at the interface of artificial intelligence, neuroscience, and health.
+Biomedical researcher with a PhD in Human Biology and several years of postdoctoral research at the University of Oxford, currently moving from academic neuroscience into data science and research & development. Experience spans Python/ML pipelines on large-scale imaging (MRI/fMRI) and behavioural data, end-to-end clinical study delivery, and VR-based rehabilitation research, combined with rigorous statistical modelling (frequentist and Bayesian) and reproducible data engineering (Python, R, AWS). Rigorous, autonomous, and used to interdisciplinary work at the interface of data science, neuroscience, and health.
 
 Education
 ======
@@ -28,25 +28,29 @@ Work experience
 ======
 * 2022 - 2026: Postdoctoral Research Fellow in Clinical Neurosciences
   * University of Oxford Centre of Integrative Neuroimaging, Oxford, UK
-  * Duties includes: 
-    * Co-developed a Unity (C#) virtual reality application for clinical research and collaborated with clinicians and multidisciplinary teams to translate research questions into data-driven analytical solutions, while mentoring students and junior researchers.
-    * Developed AI- and machine learning-based approaches to analyse multimodal neuroimaging and clinical datasets, supporting the evaluation of a virtual reality intervention on patients with visual impairments.
-    * Designed and implemented reproducible data pipelines and statistical models in Python, with high standards of data quality, validation, and reproducibility.
+  * Duties included: 
+    * Led an adult amblyopia VR rehabilitation study end-to-end: ethics preparation, participant recruitment and screening (~50 recruited, ~150 assessed), safety monitoring, and study delivery.
+    * Co-developed a Unity (C#) virtual reality application for the study, and built an AWS DynamoDB-backed pipeline to monitor remote VR training data.
+    * Applied Python-based machine learning (scikit-learn, TensorFlow) and neuroimaging pipelines (FSL, FreeSurfer, fMRIPrep) to analyse multimodal MRI/fMRI/MRS data.
+    * Built interactive reporting tools (R Shiny, R Markdown) for research collaborators, and produced study SOPs and technical documentation.
+    * Formally co-supervised one Master's and one PhD student; served as EDI Ambassador and Open Science Ambassador for the department.
   * Supervisors: Prof. Holly Bridge and Prof. Betina Ip
 
-* 2023 - 2025: Demonstrator
+* 2023 - 2025: Demonstrator & Open Science Ambassador
   * University of Oxford, Oxford, UK
   * Duties included: 
-    * Delivered practical training sessions in vision science, experimental design, and data analysis methods for medical and biomedical students.
-    * Trained researchers in data management best practices, reproducible workflows, and version control (Git) applied to clinical and neuroimaging datasets.
+    * Delivered practical training sessions in vision science (visual acuity, contrast sensitivity, stereopsis, colour vision), experimental design, and data analysis methods for medical and biomedical students.
+    * Demonstrated MRI/fMRI methods, GDPR principles, Git, and Open Science practices to researchers and course participants.
+    * Delivered around 12 workshops (2023-2025) on Git/GitHub, reproducible workflows, and responsible data sharing as Open Science Ambassador, plus one-to-one researcher support.
+    * Mentored 3 PhD and 2 Master's students through research guidance and technical support.
 
 * 2019 - 2022: PhD in Ophthalmology/Neurosciences
   * Friedrich-Alexander-Universität
 Erlangen-Nürnberg, Erlangen, DE
   * Duties included: 
-    * Conducted clinical research in vision science focused on retinal function and treatment evaluation using psychophysical approaches.
-    * Developed reproducible analysis pipelines and advanced statistical models (mixed-effects and Bayesian models) to analyse biological data and estimate perceptual thresholds.
-    * Generated high-quality datasets and communicated quantitative findings through publications and interdisciplinary collaborations.
+    * Conducted clinical vision research in inherited retinal disease (retinitis pigmentosa, Stargardt disease), recruiting and testing around 100 participants using visual psychophysics and silent-substitution photoreceptor-specific stimulation.
+    * Built a local multimodal database integrating clinical and research data, and applied frequentist and Bayesian statistical models to estimate perceptual thresholds.
+    * Redesigned the study population and protocol when COVID-19 disrupted recruitment, leading to a first-author publication in Scientific Reports.
   * Supervisor: Prof. Jan Kremers and Prof. Cord Huchzermeyer
   
 Skills
@@ -79,7 +83,8 @@ Skills
   * Neuroimaging (MRI, fMRI, MRS)
   * Clinical and physiological data
   * Multimodal data analysis
-  * eCRF / CDISC
+  * REDCap (data quality control, data queries)
+  * Good Clinical Practice (GCP) certified
   * FSL, fMRIPrep, FreeSurfer
 * Computational Environment & Cloud
   * Linux
@@ -88,15 +93,27 @@ Skills
   * Docker
   * Reproducible workflows
   * Version control
+* Reporting & Visualisation
+  * R Shiny
+  * R Markdown
+  * Power BI
+  * Tableau
 * Communication & Collaboration
   * Scientific communication
   * Multidisciplinary collaboration
   * Technical teaching
+  * Supervision and mentoring
   * Research project management
 * Languages
   * French: native
   * English: bilingual
   * German: basic
+
+Awards
+======
+* OxCIN Good Citizen Award (2025)
+* CSHL Regeneron Scholars Programme grant (2023)
+* ARVO International Travel Grant (2022)
 
 Publications
 ======

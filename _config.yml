@@ -56,7 +56,7 @@ author:
 
   # Social media
   artstation       : # Username
-  bluesky          : "https://bsky.app/profile/juju-vision.bsky.social" # Replace this with you Bluesky username
+  bluesky          : "juju-vision.bsky.social" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -65,11 +65,11 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/julien-fars/"
+  linkedin         : "julien-fars/"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
-  soundcloud       : "https://soundcloud.com/juju-fars_vision"
+  soundcloud       : "juju-fars_vision"
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username

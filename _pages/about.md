@@ -10,6 +10,8 @@ redirect_from:
 
 # Welcome!
 
+I'm a biomedical researcher with a PhD in Human Biology and several years of postodoctoral research a the University of Oxford. I am currently moving from academic neuroscience into data science and research and development. My work spans Python/ML pipelines on large-scale imaging (MRI/FMRI) and behavioural data, end-to-end clinical study delivery, and VR-based rehabilitation research.
+
 After spending seven years in academia, I realised there was no single place to showcase the projects, research, collaborations, and experiences that have shaped my career. A CV can only tell part of the story, so I created this website to bring everything together in one place.
 
 Whether you're a recruiter, collaborator, or simply curious, I hope this website provides a broader picture of my work than a traditional CV ever could.
