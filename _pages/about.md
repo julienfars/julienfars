@@ -54,7 +54,7 @@ A small scripted terminal — no AI behind it, just a fixed set of commands and 
 
 - [ ] Add more of my designs to the Portfolio section
 - [ ] Add photos to Plants
-- [ ] Start exploring Godot
+- [ ] Post progress updates on the local biometrics-tracker app (Python/Streamlit/SQLite)
 - [ ] Add my population receptive fields code (when out of embargo)
 - [ ] Start exploring web scrapping
 

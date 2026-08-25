@@ -157,7 +157,7 @@
   COMMANDS.help = function () {
     return [
       "Available commands:",
-      "  about, research, code, talks, publications, teaching, edi, plants, cv, contact",
+      "  about, research, code, talks, publications, teaching, edi, plants, biometrics, cv, contact",
       "  name &lt;yourname&gt;   — tell me what to call you",
       "  theme &lt;green|amber|blue|pink&gt;  — change the accent colour",
       "  clear             — clear the screen",
@@ -193,7 +193,18 @@
       "  • mrs_amblyopia_analysis — Python/Bash MRS pipeline",
       "  • lazy_eye_VR_training — C#/Unity VR amblyopia training app",
       "  • visual_tests_amblyopia — MATLAB/Psychtoolbox test battery",
+      "  • biometrics-tracker — Python/Streamlit local health-metrics app (WIP)",
       "Full list, with a language filter: " + link("/code/", "/code/")
+    ].join("\n");
+  };
+
+  COMMANDS.biometrics = function () {
+    return [
+      "biometrics-tracker — a local-only Python/Streamlit app for tracking body composition and measurements over time.",
+      "  • No cloud, no account, no network calls — everything lives in a local SQLite file.",
+      "  • Stack: Python 3.12, Streamlit, SQLAlchemy, Altair.",
+      "  • Status: early days — data layer and reference ranges are in, dashboard and entry form still to come.",
+      "Code: " + link("/code/biometrics-tracker", "/code/biometrics-tracker") + " · Progress log: " + link("/biometrics/biometrics-tracker/", "/biometrics/biometrics-tracker/") + " · Repo: " + link("https://github.com/julienfars/biometrics-tracker", "github.com/julienfars/biometrics-tracker")
     ].join("\n");
   };
 
@@ -256,6 +267,7 @@
     { kw: ["phd", "doctorate", "erlangen"], a: "PhD (Dr. rer. biol. hum) from Friedrich-Alexander-Universität Erlangen-Nürnberg, on temporal contrast sensitivity in retinal disease, before moving to Oxford." },
     { kw: ["oxford", "location", "where"], a: "Based in Oxford, UK, working within Oxford's neuroscience/neuroimaging departments." },
     { kw: ["plant", "garden"], a: "Yes, there's a whole `plants` section. Type `plants`." },
+    { kw: ["biometric", "health tracker", "body composition", "streamlit", "quantified self"], a: "There's a local-only Python/Streamlit app for tracking body composition over time — no cloud, no account. Type `biometrics` for details." },
     { kw: ["pride", "lgbt", "edi", "diversity"], a: "Chaired an Oxford Pride Month panel on LGBTQ+ health research, plus EDI event materials — type `edi`." },
     { kw: ["hello", "hi", "hey", "yo"], a: "Hey! Type `help` to see what I can do, or ask me about the research." }
   ];
